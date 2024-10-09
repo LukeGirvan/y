@@ -1,0 +1,262 @@
+@mixin  center-flex-column(
+
+){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin  center-flex(
+
+){
+    display: flex;    
+    justify-content: center;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+     
+}
+
+
+
+@media (max-width: 1199px) {
+    .editor-image {
+      content: url('../assets/illustration-editor-mobile.svg');
+    }
+    .laptop-image{
+        content: url('../assets/illustration-laptop-mobile.svg');
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .editor-image {
+      content: url('../assets/illustration-editor-desktop.svg');
+    }
+    .laptop-image{
+        content: url('../assets/illustration-laptop-desktop.svg');
+    }
+  }
+
+
+  body{
+    overflow-x: hidden;
+    
+}
+
+
+@media(max-width:1199px){
+    
+    
+.mid-section{
+    padding-top: 4rem; 
+    @include
+    center-flex-column();
+    align-items: center;
+    .mid-title{
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+    .editor-section{
+        @include
+        center-flex-column();
+        align-items: center;
+    
+        align-items: center;
+        .image-holder{
+            @include
+            center-flex-column();
+            img{
+                max-width: 100%
+            }
+        }
+        .paragraph-holder{
+            @include
+            center-flex-column();
+            align-items: center;
+            .paragraph-title{
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-align: center;
+                max-width: 50%;
+                margin-top: 3rem;
+                margin-bottom: 0;
+            }
+            .paragraph{
+                text-align: center;
+                max-width: 80%;
+        
+            }
+        }
+        
+        
+    }
+    .phone-image{
+        margin-top:2rem;
+        position: relative;
+        max-width: 95%;
+    }
+   
+    .blue-background
+                    {
+        @include
+        center-flex-column();
+        align-items: center;
+        margin-top: -10rem;
+        width: 100%;
+        height: 93vh;
+        background-color: rgb(42, 42, 57);
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        color:white;
+        background-image: url('../assets/bg-pattern-circles.svg');
+        background-repeat: no-repeat;
+        background-position: center -275px;
+        background-size: 150%;
+        margin-bottom: 5rem;
+        .blue-background-content{
+            @include
+        center-flex-column();
+        align-items: center;
+            .blue-background-title{
+                font-size: 2rem;
+                font-weight: 100 ;
+                max-width: 70%;
+                text-align: center;
+                // margin-top: 10rem;
+            }
+            p{
+                max-width: 80%;
+                text-align: center;
+                line-height: 2rem;
+            }
+            .circle-image{
+                width: 100%;
+            }
+        }
+    }
+    .final-section{
+        @include
+        center-flex-column();
+        align-items: center;
+        .laptop-image{
+            max-width: 100%;
+            margin-bottom: 4rem;
+        }
+        .paragraph-holder{
+            max-width: 80%;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+    }
+}
+}
+
+
+@media (min-width:1200px) {
+    .mid-section{
+        .mid-title{
+            position: absolute;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 2.5rem;
+            // justify-content: flex-end;
+            // align-items: flex-end;
+            // padding-bottom: 5rem;
+        }
+        .editor-section{
+            width: 100%;
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: row-reverse;
+            .image-holder{
+                width: 50%;
+                .editor-image{
+                    width:150%;
+                    position: relative;
+                    right: 7%;
+                }
+            }
+            
+            .paragraph-holder{
+                width:60%;
+                position: relative;
+                padding-left: 6rem;
+                @include
+                center-flex-column();
+                .paragraph{
+                    max-width: 80%;
+                }
+                .paragraph-title{
+                    font-size: 2rem;
+                }
+            }
+
+        }
+        
+        .blue-background{
+            width: 100%;
+            margin-top: -31rem;
+            width: 100%;
+            min-height: 50vh;
+            background-color: rgb(42, 42, 57);
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            color: white;
+            @include
+            center-flex-column();
+            align-items: flex-end;
+            padding-right: 5rem;
+            box-sizing: border-box;
+            margin-bottom: 10rem;
+            .blue-background-title{
+                font-size: 2rem;
+                margin-bottom:1rem;
+                margin-top:0;
+            }
+            .blue-background-content{
+                @include
+                center-flex-column();
+                flex-wrap: nowrap;
+                max-width: 50%;
+            }
+        }
+        .final-section{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5rem;
+            .laptop-image{
+                width: 60%;
+                position: relative;
+                // left: -2%;
+                
+            }
+            .paragraph{
+                max-width: 75%;
+            }
+            .paragraph-holder{
+                max-width: 50%;
+                position: relative;
+                left: 5%;
+                @include
+                center-flex-column();
+                flex-wrap: nowrap;
+                justify-content: center;
+                .paragraph-title{
+                    font-size: 2rem;
+                }
+            }
+
+
+        }
+        
+    }
+}
